@@ -1,1 +1,22 @@
-<p>by-country-page works!</p>
+<h2>Por pais</h2>
+<hr>
+
+<div class="row">
+  <div class="col">
+    <!-- Searchbox -->
+    <app-search-box
+      (onBusqueda)="searchByCountry($event)"
+      placeHolder="Buscar por pais">
+    </app-search-box>
+
+  </div>
+</div>
+
+<hr>
+
+<div class="row">
+  <div class="col">
+    <countries-table [countries] = "paises"/>
+  </div>
+</div>
+
