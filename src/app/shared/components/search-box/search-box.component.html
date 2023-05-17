@@ -1,0 +1,8 @@
+<p>search-box works!</p>
+<input
+  type="text"
+  [placeholder]="placeHolder"
+   class="form-control"
+   #txtInput
+   (keyup.enter)="buscar(txtInput.value)"
+>
