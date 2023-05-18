@@ -4,13 +4,12 @@
 <div class="row">
   <div class="col">
     <!-- Searchbox -->
-    <!-- lo q hace esto es decir bueno voy a escuchar al onBusqueda, cuando se dispare, llamo a searhByRegion -->
-    <app-search-box
-
-    (onBusqueda)="searchByRegion($event)"
-    placeHolder="Buscar por region">
-    </app-search-box>
-
+    <button *ngFor="let region of regiones"
+    class="btn mx-2 text-center"
+    [ngClass]="{ 'btn-outline-primary' : region === selectedRegion}"
+    (click)="searchByRegion(region)">
+      {{region}}
+    </button>
   </div>
 </div>
 

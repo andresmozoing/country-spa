@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Country } from '../../interfaces/country';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'countries-table',

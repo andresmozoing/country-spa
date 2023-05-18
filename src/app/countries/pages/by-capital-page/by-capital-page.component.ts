@@ -12,9 +12,12 @@ export class ByCapitalPageComponent {
 
   public paises : Country[] = []
 
+  public isLoading : boolean = false;
+
   constructor (public CountriesService : CountriesService){   }
 
   async searchByCapital( term : string){
+    this.isLoading = true;
     console.log('Desde byCapitalPage')
     console.log(term);
     await this.CountriesService.searchCapital(term)
@@ -23,6 +26,7 @@ export class ByCapitalPageComponent {
 
         this.paises = countries
         console.log(this.paises)
+        this.isLoading = false;
       })
   }
 
