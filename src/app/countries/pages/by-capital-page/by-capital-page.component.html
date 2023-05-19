@@ -7,7 +7,9 @@
     <!-- Searchbox -->
     <app-search-box
       (onBusqueda)="searchByCapital($event)"
-      placeHolder="Buscar por capital">
+      placeHolder="Buscar por capital"
+      [text]="textoBusqueda">
+
     </app-search-box>
 
   </div>
@@ -19,6 +21,6 @@
 
 <div class="row">
   <div class="col">
-    <countries-table [countries] = "paises"/>
+    <countries-table [countries] = "countries"/>
   </div>
 </div>
